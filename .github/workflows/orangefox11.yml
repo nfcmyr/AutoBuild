@@ -33,9 +33,8 @@ jobs:
           git clone https://gitlab.com/OrangeFox/misc/scripts
           cd ~/scripts
           sudo bash setup/android_build_env.sh
-          cd $(pwd)
-          cd ~/scripts
           sudo bash setup/install_android_sdk.sh
+        continue-on-error: true
 
       # Runs a set of commands using the runners shell
       - name: Sync OrangeFox sources using a minimal manifest
