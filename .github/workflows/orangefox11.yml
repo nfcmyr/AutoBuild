@@ -41,7 +41,7 @@ jobs:
         run: |
           mkdir ~/OrangeFox_sync
           cd ~/OrangeFox_sync
-          git clone https://gitlab.com/OrangeFox/sync.git (or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
+          git clone https://gitlab.com/OrangeFox/sync.git #(or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
           cd ~/OrangeFox_sync/sync/
           ./orangefox_sync.sh --branch 11.0 --path ~/fox_11.0
       - name: Place trees and kernel
