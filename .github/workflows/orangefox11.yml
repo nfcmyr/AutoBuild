@@ -35,6 +35,10 @@ jobs:
           sudo bash setup/android_build_env.sh
           sudo bash setup/install_android_sdk.sh
         continue-on-error: true
+      - name: df -h
+        run: |
+          df -h
+          ls -laFh /
 
       # Runs a set of commands using the runners shell
       - name: Sync OrangeFox sources using a minimal manifest
