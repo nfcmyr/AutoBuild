@@ -30,7 +30,7 @@ jobs:
         run: |
           cd ~
           sudo apt install git aria2 -y
-          git clone https://gitlab.com/OrangeFox/misc/scripts
+          git clone https://gitlab.com/OrangeFox/misc/scripts --depth=1
           cd ~/scripts
           sudo bash setup/android_build_env.sh
           sudo bash setup/install_android_sdk.sh
@@ -45,13 +45,13 @@ jobs:
         run: |
           mkdir ~/OrangeFox_sync
           cd ~/OrangeFox_sync
-          git clone https://gitlab.com/OrangeFox/sync.git #(or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
+          git clone https://gitlab.com/OrangeFox/sync.git --depth=1 #(or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
           cd ~/OrangeFox_sync/sync/
           ./orangefox_sync.sh --branch 11.0 --path ~/fox_11.0
       - name: Place trees and kernel
         run: |
           cd ~/OrangeFox_sync
-          git clone https://github.com/TeamWin/android_device_xiaomi_natrium device/xiaomi/natrium
+          git clone https://github.com/TeamWin/android_device_xiaomi_natrium device/xiaomi/natrium --depth=1
       - name: Build it
         run: |
           cd ~/OrangeFox
