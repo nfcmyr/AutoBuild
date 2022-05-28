@@ -54,7 +54,7 @@ jobs:
           git clone https://github.com/TeamWin/android_device_xiaomi_natrium device/xiaomi/natrium --depth=1
       - name: Build it
         run: |
-          cd ~/OrangeFox
+          cd ~/fox_11.0
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true
           export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
