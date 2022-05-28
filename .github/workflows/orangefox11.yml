@@ -59,7 +59,7 @@ jobs:
           export ALLOW_MISSING_DEPENDENCIES=true
           export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
           export LC_ALL="C"
-          lunch twrp_<device>-eng && mka recoveryimage
+          lunch twrp_natrium-eng && mka recoveryimage
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.0.0
         with:
